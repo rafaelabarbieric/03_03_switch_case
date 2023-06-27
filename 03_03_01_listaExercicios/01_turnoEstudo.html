@@ -12,9 +12,24 @@
     */
 
     //ENTRADA
-    
+
+    const periodoAula = prompt(`Informe o turno que você estuda: sendo M-Matutino,V-Vespertino ou N-Norturno.`).trim().toLowerCase();
     
     //PROCESSAMENTO
+
+    switch (periodoAula){
+        case 'm':
+            alert(`Bom Dia!`);
+            break;
+        case 'v':
+            alert(`Boa Tarde!`);
+            break;
+        case 'n':
+            alert(`Boa Noite!`);
+            break;
+        default:
+            alert(`Valor Inválido!`);
+    }
 
     
     //SAÍDA
