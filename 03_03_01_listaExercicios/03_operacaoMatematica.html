@@ -9,8 +9,61 @@
 
     //ENTRADA
 
-
+        const numero1 = Number(prompt(`Informe um número:`).trim().replace(",","."));
+        const numero2 = Number(prompt(`Informe outro número:`).trim().replace(",","."));
+        const operacao = prompt(`Informe a operação que deseja: +, -, * ou /.`).trim();
+        
     //PROCESSAMENTO
+
+    let conta
+    let mensagemFinal = ``
+    switch (operacao){
+        case '+':
+            conta = numero1 + numero2;
+            break;
+        case '-':
+            conta = numero1 - numero2;
+            break;
+        case '*':
+            conta = numero1 * numero2;
+            break;
+        case '/':
+            conta = numero1 / numero2;
+            break;
+        default :
+            alert(`Valor Inválido.`);
+            break;
+    }
+    mensagemFinal = `${conta}`
+    switch (conta%2) {
+        case 0:
+            mensagemFinal += `, esse número é par,`;
+            break;
+    
+        default:
+            mensagemFinal += `, esse número é ímpar,`;
+            break;
+    }
+    switch (conta > 0) {
+        case true:
+            mensagemFinal += ` positivo e `;
+            break;
+    
+        default:
+            mensagemFinal += ` negativo e `;
+            break;
+    }
+    switch (Number.isInteger(conta)) {
+        case true:
+            mensagemFinal += `inteiro.`;
+            break;
+    
+        default:
+            mensagemFinal += `decimal.`;
+            break;
+    }
+    alert(mensagemFinal)
+        
 
     
     //SAÍDA
