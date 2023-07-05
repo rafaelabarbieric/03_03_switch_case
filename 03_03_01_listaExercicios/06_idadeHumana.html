@@ -9,8 +9,25 @@
 
     // ENTRADA
 
-    
+    const idade = Number(prompt(`Informe a idade de seu cachorro:`).trim());
+    const porte = prompt(`Informe o porte do seu cão: sendo pequeno, médio ou grande.`).trim().toLowerCase().replace('é','e');
+
     // PROCESSAMENTO
+
+    switch (porte) {
+        case 'pequeno':
+            const idadeP = idade * 5;
+            alert(`A idade humana do seu cão é ${idadeP}.`);
+            break;
+        case 'medio':
+            const idadeM = idade * 6;
+            alert(`A idade humana de seu cão é ${idadeM}.`);
+            break;
+        default:
+            const idadeG = idade * 7;
+            alert(`A idade humana do seu cão é ${idadeG}.`);
+            break;
+    }
 
     
     // SAÍDA
