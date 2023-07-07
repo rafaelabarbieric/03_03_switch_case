@@ -7,8 +7,60 @@
 
     //ENTRADA
 
+    const hemisferio = prompt(`Informe o hemisfério que você está:`).trim().toLowerCase();
+    const mes = prompt(`Informe o mês atual:`).trim().toLowerCase();
     
     //PROCESSAMENTO
+
+    switch (hemisferio) {
+        case 'sul':
+            switch (mes) {
+                case 'janeiro':
+                case 'fevereiro':
+                case 'março':
+                    alert(`Verão!`);
+                    break;
+                case 'abril':
+                case 'maio': 
+                case 'junho': 
+                    alert(`Outono!`);
+                    break;
+                case 'julho': 
+                case 'agosto': 
+                case 'setembro': 
+                    alert(`Inverno!`);
+                    break;
+                default:
+                    alert(`Primavera!`);
+                    break;
+            }
+            break;
+        case 'norte':
+            switch (mes) {
+                case 'janeiro':
+                case 'fevereiro':
+                case 'março':
+                    alert(`Inverno!`);
+                    break;
+                case 'abril':
+                case 'maio': 
+                case 'junho': 
+                    alert(`Primavera!`);
+                    break;
+                case 'julho': 
+                case 'agosto': 
+                case 'setembro': 
+                    alert(`Verão!`);
+                    break;
+                default:
+                    alert(`Outono!`);
+                    break;
+            }
+            break;
+        default:
+            alert(`Valor Inválido!`);
+            break;
+    }
 
 
     //SAÍDA
