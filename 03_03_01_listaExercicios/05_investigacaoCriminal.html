@@ -20,7 +20,48 @@
 
     //PROCESSAMENTO
 
-    sw
+    let contador = 0 
+    switch (telefone) {
+        case 'sim':
+            contador++
+            break;
+    }
+    switch (local){
+        case 'sim':
+            contador++
+            break;
+    }
+    switch (mora){
+        case 'sim':
+            contador++
+            break;
+    }
+    switch (divida){
+        case 'sim':
+            contador++
+            break;
+    }
+    switch (trabalho){
+        case 'sim':
+            contador++
+            break;
+    }
+    switch (contador) {
+        case 2:
+            alert(`Suspeito!`);
+            break;
+        case 3:
+        case 4: 
+            alert(`Cúmplice!`);
+            break;
+        case 5:
+            alert(`Assassino!`);
+            break;
+        default:
+            alert(`Inocente!`);
+            break;
+    }
+
 
 
     //SAÍDA
